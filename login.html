@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulário</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+   
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row justify-content-center mt-5">
+		<section class="col-12 colsm-6 col-md-4">
+			<img src="img/logo.png" class="bg">
+			
+			<div>
+                <div><label>Email</label></div>
+                <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="validateFields()"/>
+            <div>
+                
+                <div><label>Senha</label></div>
+                <input type="password" name="password" id="password" placeholder="Senha" onchange="validateFields()"/>
+            </div>
+            <div>
+                <div class="form-group form-check">
+					<input type="checkbox" class="form-check-input" name="">
+					<label class="form-check-label">Lembre-me</label>
+				
+				</div>
+                
+                <button type="button" class="clear" id="recover-password-button" disabled="true">Recuperar senha</button>
+            </div>
+            <div>
+                <button type="button" class="solid" id="login-button" disabled="true">Entrar</button>
+            </div>
+            
+        </form>
+    </body>
+    
+    <link rel="stylesheet" href="css/login.css">
+    
+    <script src="js/login.js"></script>
+
+
+
+			</form>
+		</section>
+	</div>
+</div>
+
+
+</html>

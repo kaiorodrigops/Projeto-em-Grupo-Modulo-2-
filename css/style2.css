@@ -1,0 +1,102 @@
+body{
+    font-family: 'Times new roman', sans-serif;
+}
+header .carousel-inner .item{
+    height: 100vh;
+}
+.navbar-inverse {
+	background-color: #fff;
+	border-color: transparent;
+}
+.navbar-inverse .navbar-brand {
+	height: 90px;
+}
+.navbar-inverse .navbar-nav > li > a {
+	color: #000;
+	background: #fff;
+	font-size: 20px;
+}
+.bg{
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+.carousel-caption{
+    padding-bottom: 250px;
+    text-align: left;
+    left: 13%;
+}
+.carousel-caption h2 {
+	font-size: 50px;
+	text-transform: uppercase;
+	font-family: 'Alfa Slab One', cursive;
+}
+.carousel-caption .btn {
+	display: inline-block;
+	margin-top: 15px;
+}
+.carousel-control.right{
+    background-image: none;
+}
+.carousel-control.left{
+    background-image: none;
+}
+
+@media (max-width:767px){
+    .bg {
+	background-position: 65%;
+	}
+}
+    .carousel-caption {
+	padding-bottom: 140px;
+        left: 5%;
+}
+    .carousel-caption h2 {
+	font-size: 20px;
+}
+    .carousel-caption h3 {
+	font-size: 15px;
+}
+footer {
+	background: #fff;
+	padding: 86px 0;
+}
+.single-content {
+	text-align: center;
+	padding: 115px 0;
+}
+.single-box p {
+	color: #000;
+	line-height: 1.9;
+}
+.single-box h3 {
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+}
+.single-box ul {
+	list-style: none;
+	padding: 0;
+}
+.single-box ul li a {
+	text-decoration: none;
+	color: #000;
+	line-height: 2.5;
+	font-weight: 100;
+}
+.single-box h2 {
+	color: #000;
+	font-size: 20px;
+	font-weight: 700;
+}
+@media (max-width: 767px) {
+	.single-box {
+		margin-bottom: 50px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.single-box {
+		margin-bottom: 50px;
+	}
+}

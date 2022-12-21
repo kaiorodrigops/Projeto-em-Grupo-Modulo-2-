@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Assine nossos serviços</title>
+    <meta charset="utf-3">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const controls = document.querySelectorAll(".control");
+        let currentItem = 0;
+        const items = document.querySelectorAll(".item");
+        const maxItems = items.length;
+
+        controls.forEach((control) => {
+            control.addEventListener("click", (e) => {
+                isLeft = e.target.classList.contains("arrow-left");
+
+                if (isLeft) {
+                    currentItem -= 1;
+                } else {
+                    currentItem += 1;
+                }
+
+                if (currentItem >= maxItems) {
+                    currentItem = 0;
+                }
+
+                if (currentItem < 0) {
+                    currentItem = maxItems - 1;
+                }
+
+                items.forEach((item) => item.classList.remove("current-item"));
+
+                items[currentItem].scrollIntoView({
+                    behavior: "smooth",
+                    inline: "center"
+                });
+
+                items[currentItem].classList.add("current-item");
+            });
+        });
+
+    </script>
+    <style>
+        body {
+            background-color: #02130e;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        .fakeimg {
+            height: 200px;
+            background: #FFF;
+        }
+
+        .row {
+            padding: 3em;
+            background-color: #FFF;
+        }
+
+        .table-responsive {
+            padding: 7em;
+            background-color: #FFF;
+
+        }
+
+        .carrossel {
+            position: relative;
+            padding: 15px;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .gallery-wrapper {
+            overflow-x: auto;
+        }
+
+        .arrow-left,
+        .arrow-right {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: auto;
+            bottom: 0;
+            font-size: 20px;
+            line-height: 250px;
+            width: 40px;
+            color: #fff;
+            transition: all 600ms ease-in-out;
+            background: linear-gradient(to left, transparent 0%, black 200%);
+            opacity: 0.1;
+            cursor: pointer;
+            border: none;
+        }
+
+        .arrow-left:hover,
+        .arrow-right:hover {
+            opacity: 1;
+        }
+
+        .arrow-right {
+            right: 0;
+            left: auto;
+            text-align: right;
+            background: linear-gradient(to right, transparent 0%, black 200%);
+        }
+
+        .gallery {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 15px;
+        }
+
+        .item {
+            width: 250px;
+            height: 330px;
+            flex-shrink: 0;
+            transition: all 600ms ease-in-out;
+            opacity: 0.5;
+        }
+
+        .current-item {
+            opacity: 1;
+        }
+
+        .gallery-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .gallery-wrapper {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .cyan {
+            background: cyan;
+        }
+
+        .deeppink {
+            background: deeppink;
+        }
+
+        .turquoise {
+            background: turquoise;
+        }
+
+        .darkblue {
+            background: darkblue;
+        }
+
+        .purple {
+            background: purple;
+        }
+
+        .spcbar {
+            width: 60%;
+
+        }
+
+        .nav {
+            font-size: 20px;
+
+        }
+
+        footer {
+            background: #fff;
+            padding: 86px 0;
+        }
+
+        .single-content {
+            text-align: center;
+            padding: 115px 0;
+        }
+
+        .single-box p {
+            color: #000;
+            line-height: 1.9;
+        }
+
+        .single-box h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .single-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .single-box ul li a {
+            text-decoration: none;
+            color: #000;
+            line-height: 2.5;
+            font-weight: 100;
+        }
+
+        .single-box h2 {
+            color: #000;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 767px) {
+            .single-box {
+                margin-bottom: 50px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            .single-box {
+                margin-bottom: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <img src="img/logo.png" width="5%" height="5%">
+        <div class="spcbar">
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="index2.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servicos.html">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="form.html">Cadastre-se</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row row-cols-1 row-cols-md-4 mb-4 text-center">
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Mensal</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">R$39,90<small class="text-muted fw-light">/mês</small>
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Receba 1 Livros em sua casa</li>
+                        <li>Newslatter</li>
+                        <li>‎ </li>
+                        <li>‎ </li>
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary">Assine Agora</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Trimestral</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">R$69,90<small class="text-muted fw-light">/mês</small>
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Receba 3 livros em sua casa</li>
+                        <li>Newslatter</li>
+                        <li>‎ </li>
+                        <li>‎ </li>
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary">Assine Agora</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Semestral</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">R$99,90<small class="text-muted fw-light">/mês</small>
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Receba 5 livros em sua casa</li>
+                        <li>Newslatter</li>
+                        <li>Descontos no site</li>
+                        <li>‎ </li>
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary">Assine Agora</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card-header py-3 text-bg-primary border-primary">
+                    <h4 class="my-0 fw-normal">Anual</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">R$130,00<small class="text-muted fw-light">/mês</small>
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Receba 7 livros em sua casa</li>
+                        <li>Newslatter</li>
+                        <li>Descontos no site</li>
+                        <li>Clube de Vantagens</li>
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary">Assine Agora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <a href="">
+        <div class="carrossel">
+            <a href="index.html">
+                <h2 class="display-6 text-center mb-4">Acesse nossa loja de livros</h2>
+            </a>
+            <button class="arrow-left control" aria-label="Previous image">◀</button>
+            <button class="arrow-right control" aria-label="Next Image">▶</button>
+            <div class="gallery-wrapper">
+                <div class="gallery">
+
+                    <img src="data:image/jpeg;base64,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"
+                        alt="Book Image" class="item current-item">
+                    <img src="https://m.media-amazon.com/images/I/91lBONZ4tAL.jpg" alt="Book Image"
+                        class="item current-item">
+                    <img src="https://m.media-amazon.com/images/I/51PvMcvVqRL._SX324_BO1,204,203,200_.jpg"
+                        alt="Book Image" class="item current-item">
+                    <img src="https://m.media-amazon.com/images/I/71CMylJf8qL.jpg" alt="Book Image"
+                        class="item current-item">
+                    <img src="https://m.media-amazon.com/images/I/518mHAD6ZKL._SX323_BO1,204,203,200_.jpg"
+                        alt="Book Image" class="item current-item">
+                    <img src="https://m.media-amazon.com/images/I/91z1xY4ppaL.jpg" alt="Book Image"
+                        class="item current-item">
+                </div>
+            </div>
+        </div>
+    </a>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-box">
+                        <p>BOOK CLUB™ - Desenvolvido com amor e suor por programadores para programadores e amantes da
+                            área.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-box">
+                        <h2>Contato</h2>
+                        <ul>
+                            <li><a href="#">bookclub@gmail.com</a></li>
+                            <li><a href="#">(21) 1234-5678 Hosting</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Github</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-box">
+                        <h2>Categorias</h2>
+                        <ul>
+                            <li><a href="#">Front-end</a></li>
+                            <li><a href="#">Back-end</a></li>
+                            <li><a href="#">Segurança da informação</a></li>
+                            <li><a href="#">Banco de dados</a></li>
+                            <li><a href="#">Desenvolvimento mobile</a></li>
+                            <li><a href="#">Lógica de programação</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                </p>
+            </div>
+        </div>
+        </div>
+        </div>
+    </footer>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.min.js">
+
+
+
+</body>
+
+</html>
